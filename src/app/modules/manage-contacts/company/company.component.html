@@ -1,0 +1,14 @@
+<div class="card m-2" style="width: 18rem;">
+  <ng-container *ngIf="companyDetail && companyDetail.logo; then showImg; else noImg"></ng-container>
+  <ng-template #showImg><img [src]="companyDetail.logo" class="card-img-top" alt="Logo"></ng-template>
+  <ng-template #noImg>
+    <h5>No Image Available</h5>
+  </ng-template>
+    
+    <div class="card-body">
+      <h5 class="card-title">
+        {{companyDetail.name || 'NA'}}</h5>
+      <p class="card-text" [appEllipsis]>{{companyDetail.description || 'NA'}}</p>
+      <button type="button" class="btn btn-primary" (click)="routeToContactsPage(companyDetail)">Add contacts</button>
+    </div>
+  </div>

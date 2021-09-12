@@ -1,0 +1,18 @@
+<div class="flex-container">
+  <div class="border p-3">
+  <form [formGroup]="loginForm" (ngSubmit)="login()">
+        <div class="mt-3 mb-3">
+          <h4 class="text-secondary">Login to continue</h4>
+          <hr/>
+
+          <label for="userName" class="form-label">User Name (first name)*</label>
+          <input type="text" class="form-control" id="userName" aria-describedby="userName" formControlName="userName">
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password (Email Id)*</label>
+          <input type="password" class="form-control" id="password" formControlName="password">
+        </div>
+        <button type="submit" class="btn btn-dark" [disabled]="(!loginForm.valid)">Submit</button>
+  </form>
+  </div>
+</div>

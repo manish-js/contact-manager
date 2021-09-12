@@ -3,6 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
+  BASE_API: `http://my-json-server.typicode.com/bokadedarvin/AngularDeveloperSample/`,
   production: false
 };
 
